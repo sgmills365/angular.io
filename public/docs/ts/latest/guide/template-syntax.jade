@@ -252,22 +252,22 @@ block statement-context
 .l-main-section
 :marked
   <a id="binding-syntax"></a>
-  ## Binding syntax: An overview
+  ## Binding Syntax: An Overview
   Data binding is a mechanism for coordinating what users see with application data values.
   While we could push values to and pull values from HTML,
   the application is easier to write, read, and maintain if we turn these chores over to a binding framework.
   We simply declare bindings between binding sources and target HTML elements and let the framework do the work.
 
   Angular provides many kinds of data binding, and we’ll discuss each of them in this chapter.
-  First we'll take a high-level view of Angular data binding and its syntax.
+  But first we'll take a high-level view of Angular data binding and its syntax.
 
   We can group all bindings into three categories by the direction in which data flows.
   Each category has its distinctive syntax:
 table
   tr
-    th Data direction
+    th Data Direction
     th Syntax
-    th Binding type
+    th Binding Type
   tr
     td One-way<br>from data source<br>to view target
     td
@@ -302,13 +302,13 @@ table
 
   What is that target? Before we can answer that question, we must challenge ourselves to look at template HTML in a new way.
 
-  ### A new mental model
+  ### A New Mental Model
 
   With all the power of data binding and our ability to extend the HTML vocabulary
   with custom markup, it is tempting to think of template HTML as *HTML Plus*.
 
   Well, it *is* HTML Plus.
-  But it’s also significantly different than the HTML we’re used to.
+  But at the same time, it’s also significantly different than the HTML we’re used to.
   We really need a new mental model.
 
   In the normal course of HTML development, we create a visual structure with HTML elements, and
@@ -338,7 +338,7 @@ table
 
 .l-sub-section
   :marked
-    ### HTML attribute vs. DOM property
+    ### HTML Attribute vs. DOM Property
 
     The distinction between an HTML attribute and a DOM property is crucial to understanding how Angular binding works.
 
@@ -393,7 +393,7 @@ table
 :marked
   With this model firmly in mind, let's learn about binding targets.
 
-  ### Binding targets
+  ### Binding Targets
   The **target of a data binding** is something in the DOM.
   Depending on the binding type, the target can be an
   (element | component | directive) property, an
@@ -404,7 +404,7 @@ table
 <div width="90%">
 table
   tr
-    th Binding type
+    th Binding Type
     th Target
     th Examples
   tr
@@ -455,7 +455,7 @@ table
 
 .l-main-section
 :marked
-  ## Property binding
+  ## Property Binding
   We write a template **property binding** when we want to set a property of a view element to the value of
   a [template expression](#template-expressions).
 
