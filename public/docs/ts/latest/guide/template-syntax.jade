@@ -600,31 +600,30 @@ figure.image-display
 .l-main-section
 :marked
   <a id="other-bindings"></a>
-  ## Attribute, class, and style bindings
+  ## Attribute, Class, and Style Bindings
   The template syntax provides specialized one-way bindings for scenarios less well suited to property binding.
 
-  ### Attribute binding
+  ### Attribute Binding
   We can set the value of an attribute directly with an **attribute binding**.
 .l-sub-section
   :marked
     This is the only exception to the rule that a binding sets a target property. This is the only binding that creates and sets an attribute.
 
 :marked
-  We have stressed throughout this chapter that setting an element property with a property binding is always preferred to setting the attribute with a string. Why does Angular offer attribute binding?
+  We have stressed throughout this chapter that setting an element property with a property binding is always preferred to setting the attribute with a string. So then why does Angular offer attribute binding?
 
   **We must use attribute binding when there is no element property to bind.**
 
   Consider the [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA),
   [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG), and
   table span attributes. They are pure attributes.
-  They do not correspond to element properties, and they do not set element properties.
-  There are no property targets to bind to.
+  They do not correspond to element properties or set element properties since there are no property targets to bind to.
 
   We become painfully aware of this fact when we try to write something like this:
 code-example(language="html").
   &lt;tr>&lt;td colspan="{{1 + 1}}">Three-Four&lt;/td>&lt;/tr>
 :marked
-  We get this error:
+  And then we get this error:
 code-example(format="nocode").
   Template parse errors:
   Can't bind to 'colspan' since it isn't a known native property
